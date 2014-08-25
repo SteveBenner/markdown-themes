@@ -1,8 +1,9 @@
 ruby:
-	title = 'Your Project'
-	description = 'Your Project description'
+	FLATDOC_SOURCE = 'http://rstacruz.github.io/flatdoc/v/0.8.6'
+	title          = 'Godfather'
+	description    = 'Become the BOSS of your system'
 	user = 'SteveBenner'
-	repo = 'rubymine'
+	repo = 'godfather'
 
 doctype html
 html
@@ -11,44 +12,46 @@ html
 	  meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
 	  meta name="viewport" content="width=device-width"
 
-
 		/ Flatdoc
 		script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
-		script src="http://rstacruz.github.io/flatdoc/v/0.8.6/legacy.js"
-		script src="http://rstacruz.github.io/flatdoc/v/0.8.6/flatdoc.js"
+		script src="#{FLATDOC_SOURCE}/legacy.js"
+		script src="#{FLATDOC_SOURCE}/flatdoc.js"
 
 		/ Flatdoc theme
-		link rel="stylesheet" href="http://rstacruz.github.io/flatdoc/v/0.8.6/theme-white/style.css"
-		script src="http://rstacruz.github.io/flatdoc/v/0.8.6/theme-white/script.js"
+		link rel="stylesheet" href="#{FLATDOC_SOURCE}/theme-white/style.css"
+		script src="#{FLATDOC_SOURCE}/theme-white/script.js"
+
+		/ Theme
+		link rel="stylesheet" href="CSS/godfather.css"
 
 		/ Web Components
-		/script src="../bower_components/platform/platform.js"
-		/link rel="import" href="../bower_components/github-button/dist/github-button.html"
+		script src="bower_components/platform/platform.js"
+		link rel="import" href="bower_components/github-button/dist/github-button.html"
 
 		meta content=title property="og:title"
 		meta content=description name="description"
 
 		javascript:
 			var user = "#{user}", repo = "#{repo}";
-
 		coffee:
-			runner = new Flatdoc.runner fetcher: Flatdoc.url('README.md')
-			runner.run
-		/	Flatdoc.run fetcher: Flatdoc.github "#{user}/#{repo}"
+			Flatdoc.run fetcher: Flatdoc.file 'readme/godfather.md'
 
-	body role="flatdoc"
-		div.header
-			div.left
+	/ Note: a few ID tags makes it elementary to override the Flatdoc CSS theme
+		
+	body#site role="flatdoc"
+		.header
+			.left
 				h1 = title
 				ul
-					li: a href="https://github.com/#{user}/#{repo}" View on GitHub
+					/li: a href="https://github.com/#{user}/#{repo}" View on GitHub
+					li: github-button user=user repo=repo type="fork"
 					li: a href="https://github.com/#{user}/#{repo}/issues" Issues
-			div.right
-				/github-button
-				/iframe [src="http://ghbtns.com/github-btn.html?user=USER&amp;repo=REPO&amp;type=watch&amp;count=true"
+			.right
+				github-button user=user repo=repo count="true" size="large"
+				/iframe [src="http://ghbtns.com/github-btn.html?user=#{user}&amp;repo=#{repo}&amp;type=watch&amp;count=true"
 				/				allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"]
 
-		div.content-root
-			div.menubar
-				div.menu.section role="flatdoc-menu"
-			div.content role="flatdoc-content"
+		#main.content-root
+			.menubar
+				.menu.section role="flatdoc-menu"
+			#content.content role="flatdoc-content"

@@ -46,4 +46,7 @@ sim-*
 .project
 
 bower.json
-public/*.html
+#public/*.html
+public/mou/CSS
+public/index.html
+public/assets/

@@ -1,1 +1,0 @@
-/Users/neo/github/alfred/README.md

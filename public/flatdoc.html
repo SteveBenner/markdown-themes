@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width" name="viewport">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://rstacruz.github.io/flatdoc/v/0.8.6/legacy.js"></script>
+      <script src="http://rstacruz.github.io/flatdoc/v/0.8.6/flatdoc.js"></script>
+      <link href="http://rstacruz.github.io/flatdoc/v/0.8.6/theme-white/style.css" rel="stylesheet" />
+      <script src="http://rstacruz.github.io/flatdoc/v/0.8.6/theme-white/script.js"></script>
+      <link href="CSS/godfather.css" rel="stylesheet" />
+      <script src="bower_components/platform/platform.js"></script>
+      <link href="bower_components/github-button/dist/github-button.html" rel="import" />
+      <meta content="Godfather" property="og:title" />
+      <meta content="Become the BOSS of your system" name="description" />
+      <script type="text/javascript">
+        var user = "SteveBenner", repo = "godfather";
+      </script>
+      <script type="text/javascript">
+        (function() {
+          Flatdoc.run({
+            fetcher: Flatdoc.file('readme/godfather.md')
+          });
+        
+        }).call(this);
+        
+      </script>
+    </meta>
+  </head>
+  <body id="site" role="flatdoc">
+    <div class="header">
+      <div class="left">
+        <h1>
+          Godfather
+        </h1>
+        <ul>
+          <li>
+            <github-button repo="godfather" type="fork" user="SteveBenner"></github-button>
+          </li>
+          <li>
+            <a href="https://github.com/SteveBenner/godfather/issues">Issues</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <github-button count="true" repo="godfather" size="large" user="SteveBenner"></github-button>
+      </div>
+    </div>
+    <div class="content-root" id="main">
+      <div class="content" id="content" role="flatdoc-content"></div>
+      <div class="menubar" id="menu">
+        <div class="menu section" role="flatdoc-menu"></div>
+      </div>
+    </div>
+  </body>
+</html>

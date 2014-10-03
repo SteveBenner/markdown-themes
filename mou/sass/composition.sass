@@ -1,7 +1,15 @@
 // Styles for writing plain ol' text documents
-@import composition-defaults.css // todo: convert to Sass
+// todo: convert to Sass
+@import composition-defaults
+@import mixins/typography
 
 body
-  font:
-    family: 'Lucida Grande'
-    size: 14px
+	+fontsize(12)
+	padding-top: 20px
+	font-family: 'Lucida Grande'
+
+p
+	margin-bottom: 18px
+
+a
+	text-decoration: none

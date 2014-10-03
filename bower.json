@@ -1,0 +1,13 @@
+{
+  "name": "markdown-themes",
+  "version": "0.0.0",
+  "authors": [
+    "Stephen Benner <sbenner9@gmail.com>"
+  ],
+  "description": "Themes for Markdown-based web code",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "github-button": "~0.1.5"
+  }
+}

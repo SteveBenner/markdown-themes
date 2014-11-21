@@ -1,0 +1,25 @@
+@import url(GitHub-ReadMe.css);
+body {
+  border: none !important;
+  border-radius: 0;
+  padding: 0 30px; }
+  body p {
+    font: 16px "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+    line-height: 1.6; }
+  body tt, body code, body pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    margin: 0;
+    padding: 0.2em;
+    font-size: 85%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    border: none; }
+  body hr {
+    margin: 16px 0;
+    padding: 0;
+    height: 4px;
+    background-color: #e7e7e7;
+    background-image: none;
+    border: 0 none; }
+
+/*# sourceMappingURL=github-sb.css.map */

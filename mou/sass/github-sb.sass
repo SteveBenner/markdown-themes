@@ -5,7 +5,8 @@
 
 // Dimensions
 $page-width: 920px
-$content-width: 860px
+$content-width: 728px
+$content-padding: 30px
 
 // Colors
 $code-bg-color: rgba(0,0,0,0.05)
@@ -16,9 +17,14 @@ $code-font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace
 $regular-text: 16px "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif
 
 body
-	border: none !important
+	// faint grey outline to indicate dimensions of the content
+	border: 1px dashed rgba(0,0,0,0.1) !important
 	border-radius: 0
-	padding: 0 ($page-width - $content-width) / 2
+	margin: 0 0 0 auto
+	padding: 0 $content-padding
+	min-width: $content-width
+	width: $content-width
+	max-width: $content-width
 
 	p
 		font: $regular-text

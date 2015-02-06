@@ -28,3 +28,6 @@ components/
 
 ## Symbolic links
 mou/CSS
+
+## Compiled CSS
+public/CSS/*
